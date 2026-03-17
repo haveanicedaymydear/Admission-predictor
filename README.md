@@ -1,122 +1,75 @@
-# 🎓 Student Admission Predictor - Logistic Regression (Streamlit App)
+# Admission-predictor
 
-![Streamlit](https://img.shields.io/badge/Built%20With-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Deployed-brightgreen)
+A lightweight machine learning project that predicts graduate admission outcomes using logistic regression and an interactive Streamlit interface.
 
-Predict your chances of graduate school admission using a simple machine learning model!  
-This project implements logistic regression from scratch (without using libraries like `sklearn.linear_model`) and wraps it in a clean and interactive **Streamlit web app**.
+## Overview
 
-## 🔗 Live Demo
+This project is a personal implementation of a binary classification workflow for admission prediction.
 
-▶️ [Try the App](https://student-admission-predictor-minimal-version.streamlit.app/)
+The main purpose of this repository is not only to build a simple predictor, but also to better understand how a classical machine learning model works from the ground up.  
+It includes data preprocessing, normalization, logistic regression logic, evaluation metrics, and a small interactive frontend for testing predictions.
 
----
+## Features
 
-## 📌 Features
+- Logistic Regression implementation for binary classification
+- Interactive Streamlit web interface
+- Prediction based on academic and profile-related inputs
+- Simple and lightweight project structure for learning and demonstration
+- End-to-end workflow from data to user-facing prediction
 
-- Logistic Regression implemented **from scratch in NumPy**
-- User-friendly **Streamlit interface** for predictions
-- Predicts **chances of admission (0 or 1)** based on:
-  - GRE Score
-  - TOEFL Score
-  - University Rating
-  - SOP Strength
-  - LOR Strength
-  - CGPA
-  - Research Experience
+## Input Features
 
----
+The model uses the following inputs:
 
-## 📊 Dataset
+- GRE Score
+- TOEFL Score
+- University Rating
+- SOP Strength
+- LOR Strength
+- CGPA
+- Research Experience
 
-- **Source:** [Admission Prediction Dataset](https://www.kaggle.com/datasets/mohansacharya/graduate-admissions)
-- **Total Samples:** 500 students
-- **Label Used:** `Chance of Admit ≥ 0.75 → Admitted (1)`, otherwise `Not Admitted (0)`
+## Dataset
 
----
+This project uses an admission prediction dataset with applicant-level academic features.  
+For binary classification, the target is converted into an admitted / not admitted outcome using a defined threshold.
 
-## 🧠 Model Highlights
+## Why This Project Matters
 
-- Custom **sigmoid**, **loss**, **gradient**, and **training loop**
-- Uses **min-max normalization**
-- Evaluation metrics:
-  - Accuracy: 87.20%
-  - Precision: 84.68%
-  - Recall: 86.24%
-  - F1 Score: 85.45%
+This repository reflects my interest in building interpretable and lightweight ML systems.
 
----
+It demonstrates:
 
-## 🚀 How to Run Locally
+- core understanding of supervised learning
+- feature-based tabular prediction
+- practical model evaluation
+- simple ML app deployment with Streamlit
 
-1. Clone the repository:
+Although small in scale, it is useful as a foundational ML portfolio project because it connects theory, implementation, and presentation.
 
-```bash
-git clone https://github.com/shivamr021/student-admission-predictor.git
-cd student-admission-predictor
-````
+## Tech Stack
 
-2. Install required packages:
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Streamlit
 
-```bash
-pip install -r requirements.txt
-```
+## Learning Goals
 
-3. Run the Streamlit app:
+Through this project, I aimed to strengthen my understanding of:
 
-```bash
-streamlit run streamlit_app.py
-```
+- logistic regression fundamentals
+- data preprocessing and normalization
+- binary classification metrics
+- turning an ML workflow into a small interactive application
 
----
+## Project Structure
 
-## 📁 File Structure
-
-```bash
-.
-├── streamlit_app.py          # Streamlit app (interactive UI)
-├── admission_data.csv        # Dataset (used for training)
-├── README.md                 # This file
-├── requirements.txt          # Dependencies
-```
-
----
-
-## 💡 Learning Outcome
-
-* Implemented end-to-end **binary classification** without using machine learning libraries
-* Learned to build a basic **ML app with Streamlit**
-* Understood core ML evaluation metrics
-* Practiced data preprocessing and normalization
-
----
-
-## 🌐 Tech Stack
-
-* Python
-* NumPy
-* Pandas
-* Matplotlib
-* Streamlit
-
----
-
-## ✨ Future Improvements
-
-* Add model trained using `scikit-learn` for comparison
-* Allow file upload to test batch data
-* Deploy advanced model on platforms like HuggingFace or Render
-
----
-
-## 👤 Author
-
-**Shivam Rathod**
-📬 [LinkedIn](https://linkedin.com/in/shivamrathod021)
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
+```text
+.devcontainer/
+admission_data.csv
+streamlit_app.py
+requirements.txt
+README.md
+LICENSE
