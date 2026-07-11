@@ -1,0 +1,8 @@
+{
+  "instances": 768,
+  "features": 8,
+  "target": "Outcome",
+  "positive_class_count": 268,
+  "negative_class_count": 500,
+  "missing_cells_as_nan": 0
+}
